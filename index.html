@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Aplicativo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #050505;
+    }
+
+    video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1; /* Coloca o vídeo atrás dos outros elementos */
+        width: 80%;
+      }
+
+    .button-container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around; /* Alterado para space-around para distribuir o espaço uniformemente */
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      background-color: #050505;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .button {
+      flex-grow: 1; /* Faz com que os botões ocupem todo o espaço disponível */
+      padding: 15px 20px;
+      font-size: 75px;
+      border: none;
+      border-radius: 0;
+      background-color: #3498db;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-bottom: 0.0%;
+      text-align: center; /* Adicionado para centralizar o texto */
+      text-decoration: none; /* Remover sublinhado */
+    
+    }
+
+    .button:not(:last-child) {
+      margin-right: 0%;
+      margin-left: 0%;
+    }
+
+    .button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+    <video autoplay loop muted>
+    <source src="gay.mp4" type="video/mp4">
+        <!-- Adicione mais sources se necessário para compatibilidade com diferentes navegadores -->
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+  <div class="button-container">
+    <a href="http://127.0.0.1:5001/" class="button">Planilha</a>
+    <a href="https://jazzy-choux-c6be4c.netlify.app" class="button">Dieta</a>
+    <a href="https://steady-medovik-b37458.netlify.app" class="button">Treinamento</a>
+  </div>
+</body>
+</html>
